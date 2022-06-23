@@ -1,26 +1,12 @@
-let numero1, numero2, operacion;
+let numero1, numero2;
 
 do {
-  numero1 = parseFloat(prompt("ingerse un numero"));
-  numero2 = parseFloat(prompt("ingerse un otro numero"));
-  operacion = prompt("ingrese una operacion (+,-,/,*)");
+  numero1 = parseFloat(prompt("ingerse el año en que nacio"));
+  numero2 = parseFloat(prompt("ingerse el año actual"));
 } while (isNaN(numero1) || isNaN(numero2));
 
-switch (operacion) {
-  case "+":
-    alert(numero1 + numero2);
-    break;
-  case "-":
-    alert(numero1 - numero2);
-    break;
-  case "/":
-    alert(numero1 / numero2);
-    break;
-  case "*":
-    alert(numero1 * numero2);
-    break;
-  default:
-    alert("operacion no valida");
-
-    alert("gracias por interactuar conmigo");
+if (numero2 > numero1) {
+  alert(`su edad es: ${numero2 - numero1}`);
+} else {
+  alert("usted no existe");
 }
